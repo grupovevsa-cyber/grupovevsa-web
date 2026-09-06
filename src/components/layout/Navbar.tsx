@@ -5,10 +5,16 @@ export function Navbar() {
     <header className="sticky top-0 z-50 w-full border-b bg-white/95 backdrop-blur supports-[backdrop-filter]:bg-white/60">
       <div className="container mx-auto flex h-16 items-center justify-between px-4 md:px-8">
         <Link href="/" className="flex items-center space-x-2">
-          {/* Usamos un texto temporal hasta que el usuario suba el logo real */}
-          <span className="text-2xl font-bold tracking-tight text-blue-900">
-            GRUPO<span className="text-blue-600">VEV</span>
-          </span>
+          {/* Logo SVG Vectorizado (Placeholder estético basado en el PDF) */}
+          <svg width="140" height="40" viewBox="0 0 140 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+            {/* V abstracta izquierda (Gris) */}
+            <path d="M10 5 L20 30 L30 5" stroke="#475569" strokeWidth="4" strokeLinecap="round" strokeLinejoin="round"/>
+            <path d="M25 5 L35 30 L45 5" stroke="#2563EB" strokeWidth="4" strokeLinecap="round" strokeLinejoin="round"/>
+            {/* Texto GRUPO VEV */}
+            <text x="50" y="28" fontFamily="Arial, sans-serif" fontSize="22" fontWeight="900" fill="#0F172A">GRUPO</text>
+            <text x="125" y="28" fontFamily="Arial, sans-serif" fontSize="22" fontWeight="900" fill="#2563EB">VEV</text>
+            <text x="52" y="38" fontFamily="Arial, sans-serif" fontSize="8" fontWeight="600" fill="#475569" letterSpacing="1.5">DESARROLLO E INNOVACIÓN</text>
+          </svg>
         </Link>
 
         <nav className="hidden md:flex items-center space-x-6 text-sm font-medium">

@@ -6,21 +6,68 @@ export default function IconposWebConnect() {
   return (
     <div className="flex flex-col min-h-screen">
       {/* Hero Section */}
-      <section className="bg-gradient-to-br from-[#0F172A] to-[#1E3A8A] text-white py-24 md:py-32 relative overflow-hidden">
-        <div className="absolute top-0 left-0 w-full h-full opacity-10 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-blue-400 via-transparent to-transparent"></div>
-        <div className="container mx-auto px-4 md:px-8 text-center relative z-10">
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-500/20 text-blue-200 text-sm font-semibold mb-6 border border-blue-500/30">
-            <span className="flex h-2 w-2 rounded-full bg-blue-400 animate-pulse"></span>
-            Release 2026 • Soporte Multi-sucursal
+      <section className="bg-gradient-to-br from-[#0F172A] to-[#1E3A8A] text-white py-16 md:py-24 relative overflow-hidden">
+        <div className="absolute top-0 left-0 w-full h-full opacity-20 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-blue-400 via-transparent to-transparent"></div>
+        
+        <div className="container mx-auto px-4 md:px-8 relative z-10">
+          <div className="flex flex-col md:flex-row items-center justify-between gap-12">
+            
+            {/* Text Content */}
+            <div className="text-center md:text-left flex-1">
+              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-500/20 text-blue-200 text-sm font-semibold mb-6 border border-blue-500/30">
+                <span className="flex h-2 w-2 rounded-full bg-blue-400 animate-pulse"></span>
+                Release 2026 • Soporte Multi-sucursal
+              </div>
+              <h1 className="text-4xl md:text-6xl font-extrabold tracking-tight mb-4 drop-shadow-lg">
+                <span className="text-white">ICON</span><span className="text-[#991b1b]">POS</span>
+                <br />
+                <span className="text-sky-400 text-3xl md:text-5xl mt-2 block">WEB CONECT</span>
+              </h1>
+              <p className="text-lg md:text-xl text-blue-100 mb-8 max-w-2xl leading-relaxed">
+                SISTEMA INTEGRAL DE PUNTO DE VENTA WEB & GESTIÓN GASTRONÓMICA CLOUD
+              </p>
+            </div>
+
+            {/* Software Box / Carátula */}
+            <div className="flex-1 flex justify-center mb-8 md:mb-0" style={{ perspective: '1200px' }}>
+              <div 
+                className="relative w-64 h-80 md:w-80 md:h-[400px] bg-gradient-to-b from-[#0B1120] to-[#172554] border-[6px] border-slate-700/50 rounded-xl shadow-[20px_20px_40px_rgba(0,0,0,0.8),inset_0_0_20px_rgba(56,189,248,0.2)] transition-transform duration-500 hover:transform-none flex flex-col items-center justify-center overflow-hidden group"
+                style={{ transform: 'rotateY(-15deg) rotateX(5deg)', transformStyle: 'preserve-3d' }}
+              >
+                
+                {/* Glow Effects */}
+                <div className="absolute top-0 right-0 w-32 h-32 bg-sky-400/20 blur-[50px] group-hover:bg-sky-400/40 transition-colors duration-500"></div>
+                <div className="absolute bottom-0 left-0 w-32 h-32 bg-red-600/20 blur-[50px]"></div>
+                
+                {/* Carátula Content */}
+                <div className="z-10 text-center flex flex-col items-center" style={{ transform: 'translateZ(30px)' }}>
+                  {/* Icono de la marca */}
+                  <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-slate-800 to-slate-950 border border-slate-700 shadow-inner flex items-center justify-center mb-6">
+                    <Cloud className="w-8 h-8 text-sky-400" />
+                  </div>
+                  
+                  {/* Typographic Logo */}
+                  <div className="text-4xl md:text-5xl font-black italic tracking-tighter drop-shadow-xl flex items-center">
+                    <span className="text-white">ICON</span>
+                    <span className="text-[#b91c1c]">POS</span>
+                  </div>
+                  <div className="text-lg md:text-xl font-bold tracking-[0.25em] text-sky-400 mt-2">
+                    WEB CONECT
+                  </div>
+                  
+                  <div className="mt-8 px-4 py-1 bg-white/10 backdrop-blur-sm text-sky-200 text-xs font-bold rounded-full border border-sky-500/30">
+                    EDICIÓN CLOUD v1.0
+                  </div>
+                </div>
+
+                {/* Brillo tipo cristal */}
+                <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-tr from-transparent via-white/5 to-transparent skew-x-12 translate-x-[-150%] group-hover:translate-x-[150%] transition-transform duration-1000" style={{ transform: 'translateZ(40px)' }}></div>
+              </div>
+            </div>
+
           </div>
-          <h1 className="text-4xl md:text-6xl font-extrabold tracking-tight mb-6">
-            ICONPOS <span className="text-blue-400">WEB CONECT</span> <span className="text-2xl text-blue-300 font-light align-top">V1.0</span>
-          </h1>
-          <p className="text-lg md:text-2xl text-blue-100 mb-10 max-w-4xl mx-auto leading-relaxed">
-            SISTEMA INTEGRAL DE PUNTO DE VENTA WEB & GESTIÓN GASTRONÓMICA CLOUD
-          </p>
           
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-6 max-w-5xl mx-auto text-left mt-12">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6 max-w-6xl mx-auto text-left mt-16">
             <div className="bg-white/10 backdrop-blur-md p-6 rounded-xl border border-white/10">
               <Cloud className="w-8 h-8 text-blue-400 mb-4" />
               <h3 className="font-bold text-lg mb-2">100% Cloud Progresivo</h3>

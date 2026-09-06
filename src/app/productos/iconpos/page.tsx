@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import { CheckCircle2, Cloud, FileText, BrainCircuit, BarChart3, ShieldCheck, Printer, LayoutDashboard } from "lucide-react";
 
 export default function IconposWebConnect() {
@@ -79,17 +80,41 @@ export default function IconposWebConnect() {
                 </li>
               </ul>
             </div>
-            <div className="bg-slate-200 rounded-xl aspect-video border border-slate-300 shadow-inner flex items-center justify-center relative overflow-hidden">
-               <div className="absolute inset-0 bg-blue-900/5 mix-blend-multiply"></div>
-               <p className="text-slate-500 font-medium z-10">[ Espacio para Captura: Vista de Mesas ]</p>
+            
+            {/* Mockup de Tablet (iPad Style) */}
+            <div className="relative mx-auto border-gray-800 dark:border-gray-800 bg-gray-800 border-[14px] rounded-[2.5rem] h-[400px] w-full max-w-[600px] shadow-xl">
+              <div className="h-[32px] w-[3px] bg-gray-800 absolute -left-[17px] top-[72px] rounded-l-lg"></div>
+              <div className="h-[46px] w-[3px] bg-gray-800 absolute -left-[17px] top-[124px] rounded-l-lg"></div>
+              <div className="h-[46px] w-[3px] bg-gray-800 absolute -left-[17px] top-[178px] rounded-l-lg"></div>
+              <div className="h-[64px] w-[3px] bg-gray-800 absolute -right-[17px] top-[142px] rounded-r-lg"></div>
+              <div className="rounded-[2rem] overflow-hidden w-full h-full bg-white relative">
+                <Image 
+                  src="/images/iconpos/pantalla de INICIO TPV Punto de Ventas -CAJA-MESAS-ICONPOS.jpg" 
+                  alt="Control de mesas en Tablet" 
+                  fill 
+                  className="object-cover object-left-top" 
+                />
+              </div>
             </div>
           </div>
 
           <div className="grid md:grid-cols-2 gap-12 items-center mb-20">
-            <div className="bg-slate-200 rounded-xl aspect-video border border-slate-300 shadow-inner flex items-center justify-center order-2 md:order-1 relative overflow-hidden">
-               <div className="absolute inset-0 bg-blue-900/5 mix-blend-multiply"></div>
-               <p className="text-slate-500 font-medium z-10">[ Espacio para Captura: Comandeo y Modificadores ]</p>
+            {/* Mockup de Teléfono Móvil (iPhone Style) */}
+            <div className="relative mx-auto border-gray-800 dark:border-gray-800 bg-gray-800 border-[14px] rounded-[2.5rem] h-[500px] w-[250px] shadow-xl order-2 md:order-1">
+              <div className="w-[120px] h-[18px] bg-gray-800 absolute top-0 left-1/2 -translate-x-1/2 rounded-b-[1rem] z-20"></div>
+              <div className="h-[46px] w-[3px] bg-gray-800 absolute -left-[17px] top-[124px] rounded-l-lg"></div>
+              <div className="h-[46px] w-[3px] bg-gray-800 absolute -left-[17px] top-[178px] rounded-l-lg"></div>
+              <div className="h-[64px] w-[3px] bg-gray-800 absolute -right-[17px] top-[142px] rounded-r-lg"></div>
+              <div className="rounded-[2rem] overflow-hidden w-full h-full bg-white relative">
+                <Image 
+                  src="/images/iconpos/pantalla de INICIO TPV Punto de Ventas -PANTALLA DE VENTAS Y ARTICULOS-ICONPOS.jpg" 
+                  alt="Toma rápida de pedidos móvil" 
+                  fill 
+                  className="object-cover object-left" 
+                />
+              </div>
             </div>
+            
             <div className="order-1 md:order-2">
               <h3 className="text-2xl font-bold text-blue-900 mb-4">Toma Rápida de Pedidos y Producción</h3>
               <ul className="space-y-4">
@@ -123,12 +148,27 @@ export default function IconposWebConnect() {
       {/* Módulo Backoffice */}
       <section className="py-20 bg-white">
         <div className="container mx-auto px-4 md:px-8">
-          <div className="text-center max-w-3xl mx-auto mb-16">
+          <div className="text-center max-w-3xl mx-auto mb-12">
             <h2 className="text-3xl font-bold tracking-tight text-slate-900 mb-4">MÓDULO BACKOFFICE • EMPRESARIAL</h2>
             <p className="text-slate-600 text-lg">Analítica, Inteligencia Artificial y Control Fiscal en un solo lugar.</p>
           </div>
+          
+          {/* Mockup Desktop (Macbook Style) para el Dashboard */}
+          <div className="relative mx-auto mb-16 border-gray-800 bg-gray-800 border-[8px] rounded-t-xl h-[250px] sm:h-[400px] md:h-[500px] max-w-4xl shadow-2xl">
+            <div className="rounded-sm overflow-hidden w-full h-full bg-white relative">
+              <Image 
+                src="/images/iconpos/pantalla del Backoffice -Dashborar -administrativo-ICONPOS.jpg" 
+                alt="Dashboard Gerencial Backoffice" 
+                fill 
+                className="object-cover object-top" 
+              />
+            </div>
+            <div className="absolute -bottom-[16px] -inset-x-8 h-[16px] bg-gray-400 rounded-b-xl shadow-lg flex justify-center items-start">
+               <div className="w-24 h-2 bg-gray-500 rounded-b-md"></div>
+            </div>
+          </div>
 
-          <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+          <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto mt-12">
             <div className="p-8 bg-blue-50 border border-blue-100 rounded-2xl">
               <LayoutDashboard className="w-10 h-10 text-blue-600 mb-4" />
               <h3 className="text-xl font-bold text-slate-900 mb-3">Dashboard y Analítica</h3>

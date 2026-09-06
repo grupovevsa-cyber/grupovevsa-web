@@ -6,13 +6,13 @@ export function Navbar() {
     <header className="sticky top-0 z-50 w-full border-b bg-white/95 backdrop-blur supports-[backdrop-filter]:bg-white/60">
       <div className="container mx-auto flex h-20 items-center justify-between px-4 md:px-8">
         <Link href="/" className="flex items-center space-x-2">
-          {/* Logo Oficial Subido (Agrandado) */}
+          {/* Logo Oficial Subido (Escalado drásticamente) */}
           <Image 
             src="/logo.jpg" 
             alt="Grupo VEV Logo" 
-            width={240} 
-            height={80} 
-            className="h-16 w-auto object-contain"
+            width={400} 
+            height={120} 
+            className="h-28 w-auto object-contain transform scale-150 origin-left"
             priority
           />
         </Link>

@@ -1,30 +1,12 @@
 import Link from "next/link";
 import Image from "next/image";
+import { HeroSlider } from "@/components/ui/HeroSlider";
 
 export default function Home() {
   return (
     <div className="flex flex-col min-h-screen">
-      {/* Hero Section */}
-      <section className="bg-gradient-to-br from-slate-900 to-blue-900 text-white py-24 md:py-32">
-        <div className="container mx-auto px-4 md:px-8 text-center md:text-left">
-          <div className="max-w-3xl">
-            <h1 className="text-4xl md:text-6xl font-extrabold tracking-tight mb-6">
-              Desarrollo e Innovación Integral
-            </h1>
-            <p className="text-lg md:text-xl text-blue-100 mb-8 leading-relaxed">
-              Soluciones integrales de alto valor en desarrollo tecnológico, infraestructura crítica y consultoría estratégica que optimizan la productividad de nuestros clientes.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
-              <Link href="#servicios" className="inline-flex h-12 items-center justify-center rounded-md bg-white px-8 font-medium text-blue-900 shadow transition-colors hover:bg-slate-100">
-                Nuestros Servicios
-              </Link>
-              <Link href="#productos" className="inline-flex h-12 items-center justify-center rounded-md border border-blue-200 bg-transparent px-8 font-medium text-white transition-colors hover:bg-blue-800">
-                Ver Software
-              </Link>
-            </div>
-          </div>
-        </div>
-      </section>
+      {/* Carrusel Dinámico (Sustituye al Hero estático) */}
+      <HeroSlider />
 
       {/* Quiénes Somos & Misión/Visión */}
       <section className="py-20 bg-white" id="nosotros">

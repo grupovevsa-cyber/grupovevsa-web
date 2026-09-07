@@ -1,0 +1,19 @@
+- [ ] Fase 1: Arquitectura de Base de Datos
+  - [/] Modificar `prisma/schema.prisma` añadiendo modelos de tienda.
+  - [ ] Ejecutar `npx prisma db push` o migración a Supabase.
+  - [ ] Generar nuevo Prisma Client.
+- [ ] Fase 2: Desarrollo del Panel Administrativo (CMS)
+  - [ ] Crear Layout del Admin CMS (`/admin/tienda/layout.tsx`).
+  - [ ] Vista Dashboard (`/admin/tienda`).
+  - [ ] CRUD de Productos (`/admin/tienda/productos`).
+  - [ ] Vista Pedidos (`/admin/tienda/pedidos`).
+  - [ ] Vista Clientes (`/admin/tienda/clientes`).
+- [ ] Fase 3: Estado Global y Carrito (Frontend)
+  - [ ] Configurar Zustand para estado del carrito.
+  - [ ] Integrar carrito dinámico en `/tienda/cart`.
+- [ ] Fase 4: Checkout y Pasarelas
+  - [ ] Integrar estado de carrito con `/tienda/checkout`.
+  - [ ] APIs para registro de Pedidos y simulación de Pagos.
+- [ ] Fase 5: Integración y Siembra de Datos (Seed)
+  - [ ] Script de migración inicial con catálogo core.
+  - [ ] Reemplazar datos "hardcodeados" en Frontend por datos de BD.

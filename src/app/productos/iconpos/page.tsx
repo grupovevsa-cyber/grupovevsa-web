@@ -189,6 +189,56 @@ export default function IconposWebConnect() {
               </ul>
             </div>
           </div>
+
+          {/* Módulo KDS (Kitchen Display System) */}
+          <div className="grid md:grid-cols-2 gap-12 items-center mb-10 border-t border-slate-200 pt-20">
+            <div>
+              <h3 className="text-2xl font-bold text-blue-900 mb-4">Monitor de Cocina KDS (Hostelería y Bar)</h3>
+              <p className="text-slate-600 mb-6 text-lg">
+                Sincronización instantánea entre sala y cocina. Digitaliza las comandas y acelera los tiempos de entrega.
+              </p>
+              <ul className="space-y-4">
+                <li className="flex gap-3">
+                  <CheckCircle2 className="w-6 h-6 text-blue-500 shrink-0" />
+                  <div>
+                    <span className="font-bold text-slate-900">Control por Estaciones:</span>
+                    <p className="text-slate-600 text-sm">Filtra comandas por áreas específicas (Bar, Parrilla, Postres, Cocina Fría).</p>
+                  </div>
+                </li>
+                <li className="flex gap-3">
+                  <CheckCircle2 className="w-6 h-6 text-blue-500 shrink-0" />
+                  <div>
+                    <span className="font-bold text-slate-900">Temporizadores y Alertas:</span>
+                    <p className="text-slate-600 text-sm">Visualiza el tiempo de espera por mesa con colores de prioridad (Rojo: Retraso, Verde: Listo).</p>
+                  </div>
+                </li>
+                <li className="flex gap-3">
+                  <CheckCircle2 className="w-6 h-6 text-blue-500 shrink-0" />
+                  <div>
+                    <span className="font-bold text-slate-900">Gestión de Estados:</span>
+                    <p className="text-slate-600 text-sm">Avanza los pedidos desde "Por Preparar" hasta "En Preparación" y notifica al mesero al terminar.</p>
+                  </div>
+                </li>
+              </ul>
+            </div>
+
+            {/* Mockup de Tablet (iPad Landscape Style) para KDS */}
+            <div className="relative mx-auto border-gray-900 bg-gray-900 border-[12px] rounded-[2rem] h-[300px] sm:h-[400px] w-full max-w-2xl shadow-2xl">
+              {/* Hardware details */}
+              <div className="absolute top-1/2 -left-[14px] w-[3px] h-[40px] bg-gray-800 rounded-l-lg -translate-y-1/2"></div>
+              <div className="absolute top-1/2 -right-[14px] w-[3px] h-[40px] bg-gray-800 rounded-r-lg -translate-y-1/2"></div>
+              <div className="absolute -top-[14px] left-1/2 w-[40px] h-[3px] bg-gray-800 rounded-t-lg -translate-x-1/2"></div>
+              <div className="rounded-xl overflow-hidden w-full h-full bg-slate-900 relative">
+                <Image 
+                  src="/images/iconpos/kds-monitor.png" 
+                  alt="Monitor de Cocina KDS ICONPOS" 
+                  fill 
+                  className="object-cover object-top" 
+                />
+              </div>
+            </div>
+          </div>
+
         </div>
       </section>
 

@@ -146,6 +146,47 @@ export default function DistribuidoresPage() {
             </div>
 
           </div>
+
+          {/* Alianzas Estratégicas */}
+          <div className="mt-20">
+            <div className="text-center mb-10">
+              <h2 className="text-3xl font-bold text-[#1C2331] mb-3">Alianzas Estratégicas Internacionales</h2>
+              <p className="text-slate-600 text-lg">Trabajamos junto a líderes tecnológicos para brindar soluciones robustas en toda la región.</p>
+            </div>
+            
+            <div className="bg-white rounded-[20px] border border-blue-100 p-8 shadow-[0_4px_20px_rgb(0,0,0,0.04)] hover:shadow-lg transition-shadow max-w-4xl mx-auto">
+              <div className="flex flex-col md:flex-row gap-8 items-center md:items-start">
+                <div className="w-20 h-20 rounded-2xl bg-gradient-to-br from-blue-900 to-sky-600 flex items-center justify-center text-white shrink-0 shadow-lg">
+                  <Globe className="w-10 h-10" />
+                </div>
+                <div className="flex-1 space-y-4 text-center md:text-left">
+                  <div>
+                    <h3 className="text-2xl font-bold text-[#1C2331] mb-2">ICONSOFTLAT</h3>
+                    <div className="flex items-center justify-center md:justify-start gap-1.5 text-sm text-slate-500 mb-2">
+                      <MapPin className="w-4 h-4 text-sky-600" />
+                      <span className="font-medium text-slate-600">Región de Latinoamérica</span>
+                    </div>
+                  </div>
+                  
+                  <p className="text-slate-600 leading-relaxed text-[15px]">
+                    <strong className="text-blue-900">Servicios:</strong> Cloud · Software a medida · Multiplataforma y PAC (Proveedores autorizados de DGI Panamá, y otros países según requerimiento fiscal y facturación electrónica). Integraciones de medios de pagos en línea.
+                  </p>
+                  
+                  <div className="flex flex-col sm:flex-row gap-6 pt-5 border-t border-slate-100 justify-center md:justify-start">
+                    <a href="mailto:support@iconsoftlat.com" className="flex items-center gap-2 text-slate-600 hover:text-blue-600 transition-colors">
+                      <Mail className="w-5 h-5 text-blue-900" />
+                      <span className="font-medium">support@iconsoftlat.com</span>
+                    </a>
+                    <a href="https://iconsoftlat.com/" target="_blank" rel="noreferrer" className="flex items-center gap-2 text-slate-600 hover:text-blue-600 transition-colors">
+                      <Globe className="w-5 h-5 text-blue-900" />
+                      <span className="font-medium">www.iconsoftlat.com</span>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
         </div>
       </section>
     </div>

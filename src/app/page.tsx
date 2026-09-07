@@ -52,9 +52,9 @@ export default function Home() {
             <div className="bg-white p-8 rounded-2xl border border-slate-200 hover:shadow-[0_8px_30px_rgb(0,0,0,0.08)] hover:border-slate-300 transition-all duration-300 flex flex-col text-left group">
               {/* App Icon Minimalista */}
               <div className="flex items-center gap-3.5 mb-6">
-                <div className="w-11 h-11 rounded-[12px] bg-gradient-to-br from-teal-500 to-teal-700 flex flex-col items-center justify-center shadow-md shadow-teal-500/20 shrink-0 border border-teal-400/30 group-hover:scale-105 transition-transform">
-                  <span className="text-white text-[8px] font-black leading-tight tracking-widest opacity-90">ICON</span>
-                  <span className="text-white text-[12px] font-black leading-tight">POS</span>
+                <div className="w-11 h-11 rounded-[12px] bg-gradient-to-br from-sky-400 to-cyan-600 flex flex-col items-center justify-center shadow-md shadow-sky-500/20 shrink-0 border border-sky-400/30 group-hover:scale-105 transition-transform">
+                  <span className="text-white text-[8px] font-black leading-tight tracking-widest">ICON</span>
+                  <span className="text-red-700 text-[12px] font-black leading-tight drop-shadow-sm">POS</span>
                 </div>
                 <h3 className="text-[17px] font-extrabold text-slate-900 leading-tight">ICONPOS<br/>WEBCONECT</h3>
               </div>

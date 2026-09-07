@@ -3,8 +3,64 @@ import Link from "next/link";
 import { Search, ShoppingCart, User, Phone, ShieldCheck, Truck, Wrench, Award, Facebook, Instagram, Twitter, ChevronRight, Monitor, Printer, Smartphone, Package, Info, HelpCircle } from "lucide-react";
 
 export default function TiendaPage() {
-  const categories = [
-    "TPV", "SOFTWARE", "PDA/TABLET", "PAPEL TÉRMICO", "BALANZAS", "CAJONES", "IMPRESORAS", "KITS POS", "OUTLET"
+  const megaCategories = [
+    {
+      name: "TPV",
+      megaMenu: [
+        { title: "PANTALLAS TPV", links: ["Ver todos los TPV", "TPV Android", "TPV Windows", "Monitores de cocina", "Accesorios TPV"] },
+        { title: "PACK TPV", links: ["Ver todos los packs", "Hostelería", "Comercio / Retail", "Foodtruck"] },
+        { title: "MARCAS DESTACADAS", links: ["BTSPOS", "SUNMI", "GEON"] },
+        { title: "PERIFÉRICOS", links: ["Visores", "Lectores de huella", "Lectores / Escáner"] }
+      ]
+    },
+    {
+      name: "SOFTWARE",
+      megaMenu: [
+        { title: "SISTEMAS", links: ["ICONPOS WEB INVOICE", "ICONPOS WEB CONECT", "ICON SUPPORT", "ICON GENIUS"] },
+        { title: "KITS (Pack TPV + Software)", links: ["Ver todos los KIT", "KIT Retail", "KIT Hostelería"] }
+      ]
+    },
+    {
+      name: "PDA/TABLET",
+      megaMenu: [
+        { title: "TABLET", links: ["Ver todas las Tablets", "Accesorios Tablet"] },
+        { title: "MARCAS DESTACADAS", links: ["BTSPOS", "SUNMI", "ZEBRA"] },
+        { title: "PDA", links: ["Sin impresora", "Con impresora", "Accesorios PDA"] }
+      ]
+    },
+    {
+      name: "PAPEL TÉRMICO",
+      megaMenu: [
+        { title: "ROLLOS PARA IMPRESORAS", links: ["80x80mm", "80x60mm", "112x50mm"] },
+        { title: "ROLLOS PARA DATÁFONOS Y BALANZAS", links: ["57x55mm", "57x40mm", "57x35mm"] }
+      ]
+    },
+    {
+      name: "BALANZAS",
+      megaMenu: [
+        { title: "TIPO DE BALANZAS", links: ["Control por Peso", "Comercial", "Peso-Precio-Importe", "Monocélula", "Balanza-PC"] },
+        { title: "MARCAS DESTACADAS", links: ["DIBAL", "Baxtran"] }
+      ]
+    },
+    {
+      name: "CAJONES",
+      megaMenu: [
+        { title: "CAJÓN AUTOMÁTICO", links: ["Horizontal", "Vertical"] },
+        { title: "CAJÓN INTELIGENTE", links: ["Ver todos los cajones inteligentes", "Ingresadora de efectivo", "Financiación a medida"] },
+        { title: "CAJÓN MANUAL", links: ["Ver todos los cajones manuales"] }
+      ]
+    },
+    { name: "IMPRESORAS" },
+    {
+      name: "QUIOSCOS",
+      megaMenu: [
+        { title: "QUIOSCOS WINDOWS", links: ["Ver todos los quioscos"] },
+        { title: "MARCAS DESTACADAS", links: ["GEON", "SUNMI"] },
+        { title: "QUIOSCOS ANDROID", links: ["Ver todos los quioscos"] }
+      ]
+    },
+    { name: "KITS POS" },
+    { name: "OUTLET" }
   ];
 
   return (
@@ -59,14 +115,36 @@ export default function TiendaPage() {
       </div>
 
       {/* Navigation Bar */}
-      <nav className="bg-white border-b border-slate-200 hidden md:block shadow-sm relative z-10">
-        <div className="container mx-auto px-4">
-          <ul className="flex items-center justify-center space-x-8">
-            {categories.map((cat) => (
-              <li key={cat}>
-                <Link href="#" className="text-slate-600 hover:text-blue-900 text-xs font-bold uppercase tracking-wider py-4 block border-b-2 border-transparent hover:border-blue-900 transition-all">
-                  {cat}
+      <nav className="bg-white border-b border-slate-200 hidden md:block shadow-sm relative z-50">
+        <div className="container mx-auto px-4 relative">
+          <ul className="flex flex-wrap items-center justify-center gap-x-8">
+            {megaCategories.map((cat, i) => (
+              <li key={i} className="group">
+                <Link href="#" className="text-slate-600 hover:text-blue-900 text-xs font-bold uppercase tracking-wider py-4 block border-b-2 border-transparent group-hover:border-blue-900 transition-all">
+                  {cat.name}
                 </Link>
+                
+                {cat.megaMenu && (
+                  <div className="absolute left-0 top-[100%] w-full bg-white shadow-[0_10px_20px_rgb(0,0,0,0.05)] border-t border-slate-200 invisible opacity-0 group-hover:visible group-hover:opacity-100 transition-all duration-200 p-8 rounded-b-xl z-50">
+                    <div className="flex flex-wrap items-start justify-start gap-12 max-w-5xl mx-auto">
+                      {cat.megaMenu.map((column, colIdx) => (
+                        <div key={colIdx} className="flex-1 min-w-[200px]">
+                          <h4 className="text-[11px] font-black uppercase text-slate-800 tracking-widest border-b-[3px] border-slate-800 pb-2 mb-4">{column.title}</h4>
+                          <ul className="space-y-3">
+                            {column.links.map((link, linkIdx) => (
+                              <li key={linkIdx}>
+                                <Link href="#" className="text-[13px] font-medium text-slate-500 hover:text-blue-600 transition-colors flex items-center gap-1.5">
+                                  <ChevronRight className="w-3.5 h-3.5 opacity-0 -ml-5 transition-all group-hover:opacity-100 group-hover:ml-0 text-blue-600" />
+                                  {link}
+                                </Link>
+                              </li>
+                            ))}
+                          </ul>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                )}
               </li>
             ))}
           </ul>

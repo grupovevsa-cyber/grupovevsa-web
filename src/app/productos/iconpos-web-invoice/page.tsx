@@ -23,11 +23,11 @@ export default function IconposWebInvoicePage() {
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div className="max-w-2xl">
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold tracking-tight mb-6 leading-[1.1]">
-                Emisión Fiscal <br/> 
-                <span className="text-sky-400">Automatizada y en la Nube</span>
+                SISTEMA ICONPOS <br/> 
+                <span className="text-sky-400">WEB CONECT</span>
               </h1>
               <p className="text-lg text-slate-300 mb-8 leading-relaxed">
-                Sistema SAAS certificado para la generación de CUFE, QR DGI, control de inventario y descarga automática de comprobantes. Todo centralizado para el cumplimiento fiscal (DGI) en tiempo real.
+                Sistema de facturación en línea SAAS cloud service, facturación electrónica con DGI, manejo de múltiples tipos de negocios (RETAIL, Hostelería, Bar, Restaurante, Rapid Food, y otras industrias), integraciones de herramientas IA para carga de facturas, productos y compras. Capacidad de conexión e integración con puntos de ventas y API bancarios para cobros directos, poder operar en terminales de banco.
               </p>
               <div className="flex gap-4">
                 <Link href="/contacto" className="inline-flex h-12 items-center justify-center rounded-lg bg-sky-500 px-8 font-semibold text-white shadow-lg shadow-sky-500/25 hover:bg-sky-400 transition-colors">
@@ -36,18 +36,16 @@ export default function IconposWebInvoicePage() {
               </div>
             </div>
             
-            {/* Hero Image Mockup */}
-            <div className="relative mx-auto border-slate-800 bg-slate-800 border-[8px] rounded-xl h-[300px] sm:h-[400px] w-full max-w-2xl shadow-2xl transform rotate-1 hover:rotate-0 transition-transform duration-500">
-              <div className="rounded overflow-hidden w-full h-full bg-white relative">
+            {/* Hero Image Mockup (Mobile & Tablet) */}
+            <div className="relative mx-auto w-full max-w-2xl transform hover:scale-105 transition-transform duration-500">
+              <div className="relative w-full h-[300px] sm:h-[450px]">
                 <Image 
-                  src="/images/iconpos-web-invoice/Inicio de SItema SAAS -iconpos web invoice- online.jpg" 
-                  alt="Inicio ICONPOS WEB INVOICE SAAS" 
+                  src="/images/iconpos-web-invoice/hero-devices.png" 
+                  alt="Sistema ICONPOS WEB CONECT Dispositivos" 
                   fill 
-                  className="object-cover object-left-top" 
+                  className="object-contain object-center drop-shadow-2xl" 
+                  priority
                 />
-              </div>
-              <div className="absolute -bottom-[16px] -inset-x-8 h-[16px] bg-slate-700 rounded-b-xl shadow-lg flex justify-center items-start">
-                 <div className="w-24 h-2 bg-slate-800 rounded-b-md"></div>
               </div>
             </div>
           </div>

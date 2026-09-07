@@ -36,7 +36,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Nuestras Soluciones (Productos) - Estilo Minimalista y Alineado a la Izquierda */}
+      {/* Nuestras Soluciones (Productos) - Estilo Minimalista con App Icons */}
       <section className="py-24 bg-white" id="productos">
         <div className="container mx-auto px-4 md:px-8">
           <div className="text-center max-w-3xl mx-auto mb-16">
@@ -50,17 +50,15 @@ export default function Home() {
             
             {/* ICONPOS WEBCONECT */}
             <div className="bg-white p-8 rounded-2xl border border-slate-200 hover:shadow-[0_8px_30px_rgb(0,0,0,0.08)] hover:border-slate-300 transition-all duration-300 flex flex-col text-left group">
-              {/* Logo Minimalista */}
-              <div className="flex items-center gap-3 mb-8">
-                <div className="grid grid-cols-3 gap-[2px] w-7 h-7">
-                  {[...Array(9)].map((_, i) => (
-                    <div key={i} className="bg-teal-500 rounded-[1px]"></div>
-                  ))}
+              {/* App Icon Minimalista */}
+              <div className="flex items-center gap-3.5 mb-6">
+                <div className="w-11 h-11 rounded-[12px] bg-gradient-to-br from-teal-500 to-teal-700 flex flex-col items-center justify-center shadow-md shadow-teal-500/20 shrink-0 border border-teal-400/30 group-hover:scale-105 transition-transform">
+                  <span className="text-white text-[8px] font-black leading-tight tracking-widest opacity-90">ICON</span>
+                  <span className="text-white text-[12px] font-black leading-tight">POS</span>
                 </div>
-                <span className="font-extrabold text-slate-800 text-sm tracking-tight">ICONPOS</span>
+                <h3 className="text-[17px] font-extrabold text-slate-900 leading-tight">ICONPOS<br/>WEBCONECT</h3>
               </div>
               
-              <h3 className="text-xl font-bold text-slate-900 mb-3">ICONPOS WEBCONECT</h3>
               <p className="text-sm text-slate-500 mb-8 flex-grow leading-relaxed">
                 Plataforma centralizada de interconexión y sincronización de puntos de venta, transacciones multisede y monitoreo cloud en tiempo real.
               </p>
@@ -73,17 +71,15 @@ export default function Home() {
             {/* ICONPOS WEB INVOICE */}
             <div className="bg-white p-8 rounded-2xl border border-slate-200 hover:shadow-[0_8px_30px_rgb(0,0,0,0.08)] hover:border-slate-300 transition-all duration-300 flex flex-col text-left group relative">
               <div className="absolute top-0 right-6 bg-blue-600 text-white text-[9px] font-bold px-2 py-1 rounded-b-md">DGI PANAMÁ</div>
-              {/* Logo Minimalista */}
-              <div className="flex items-center gap-3 mb-8">
-                <div className="grid grid-cols-3 gap-[2px] w-7 h-7">
-                  {[...Array(9)].map((_, i) => (
-                    <div key={i} className="bg-blue-600 rounded-[1px]"></div>
-                  ))}
+              {/* App Icon Minimalista */}
+              <div className="flex items-center gap-3.5 mb-6 mt-2">
+                <div className="w-11 h-11 rounded-[12px] bg-gradient-to-br from-blue-600 to-indigo-800 flex flex-col items-center justify-center shadow-md shadow-blue-600/20 shrink-0 border border-blue-400/30 group-hover:scale-105 transition-transform">
+                  <span className="text-white text-[8px] font-black leading-tight tracking-widest opacity-90">WEB</span>
+                  <span className="text-white text-[12px] font-black leading-tight">INV</span>
                 </div>
-                <span className="font-extrabold text-slate-800 text-sm tracking-tight">WEB INVOICE</span>
+                <h3 className="text-[17px] font-extrabold text-slate-900 leading-tight">ICONPOS<br/>WEB INVOICE</h3>
               </div>
               
-              <h3 className="text-xl font-bold text-slate-900 mb-3">ICONPOS WEB INVOICE</h3>
               <p className="text-sm text-slate-500 mb-8 flex-grow leading-relaxed">
                 Módulo omnicanal de emisión fiscal. Generación de CUFE, QR DGI, descarga automática de comprobantes y reportería contable.
               </p>
@@ -95,17 +91,15 @@ export default function Home() {
 
             {/* ICON SUPPORT */}
             <div className="bg-white p-8 rounded-2xl border border-slate-200 hover:shadow-[0_8px_30px_rgb(0,0,0,0.08)] hover:border-slate-300 transition-all duration-300 flex flex-col text-left group">
-              {/* Logo Minimalista */}
-              <div className="flex items-center gap-3 mb-8">
-                <div className="grid grid-cols-3 gap-[2px] w-7 h-7">
-                  {[...Array(9)].map((_, i) => (
-                    <div key={i} className="bg-emerald-500 rounded-[1px]"></div>
-                  ))}
+              {/* App Icon Minimalista */}
+              <div className="flex items-center gap-3.5 mb-6">
+                <div className="w-11 h-11 rounded-[12px] bg-gradient-to-br from-emerald-500 to-emerald-700 flex flex-col items-center justify-center shadow-md shadow-emerald-500/20 shrink-0 border border-emerald-400/30 group-hover:scale-105 transition-transform">
+                  <span className="text-white text-[8px] font-black leading-tight tracking-widest opacity-90">ICON</span>
+                  <span className="text-white text-[12px] font-black leading-tight">SUP</span>
                 </div>
-                <span className="font-extrabold text-slate-800 text-sm tracking-tight">SUPPORT</span>
+                <h3 className="text-[17px] font-extrabold text-slate-900 leading-tight">ICON<br/>SUPPORT</h3>
               </div>
               
-              <h3 className="text-xl font-bold text-slate-900 mb-3">ICON SUPPORT</h3>
               <p className="text-sm text-slate-500 mb-8 flex-grow leading-relaxed">
                 Plataforma web de soporte técnico con tickets de servicio, trazabilidad QR, geolocalización y firmas digitales.
               </p>
@@ -117,17 +111,15 @@ export default function Home() {
 
             {/* ICON GENIUS */}
             <div className="bg-white p-8 rounded-2xl border border-slate-200 hover:shadow-[0_8px_30px_rgb(0,0,0,0.08)] hover:border-slate-300 transition-all duration-300 flex flex-col text-left group">
-              {/* Logo Minimalista */}
-              <div className="flex items-center gap-3 mb-8">
-                <div className="grid grid-cols-3 gap-[2px] w-7 h-7">
-                  {[...Array(9)].map((_, i) => (
-                    <div key={i} className="bg-rose-500 rounded-[1px]"></div>
-                  ))}
+              {/* App Icon Minimalista */}
+              <div className="flex items-center gap-3.5 mb-6">
+                <div className="w-11 h-11 rounded-[12px] bg-gradient-to-br from-rose-500 to-rose-700 flex flex-col items-center justify-center shadow-md shadow-rose-500/20 shrink-0 border border-rose-400/30 group-hover:scale-105 transition-transform">
+                  <span className="text-white text-[8px] font-black leading-tight tracking-widest opacity-90">ICON</span>
+                  <span className="text-white text-[12px] font-black leading-tight">GEN</span>
                 </div>
-                <span className="font-extrabold text-slate-800 text-sm tracking-tight">GENIUS</span>
+                <h3 className="text-[17px] font-extrabold text-slate-900 leading-tight">ICON GENIUS<br/>& BUILDER</h3>
               </div>
               
-              <h3 className="text-xl font-bold text-slate-900 mb-3">ICON GENIUS & BUILDER</h3>
               <p className="text-sm text-slate-500 mb-8 flex-grow leading-relaxed">
                 Plataforma inteligente de desarrollo asistido con IA. Constructora de flujos de automatización operativa.
               </p>

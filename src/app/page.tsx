@@ -1,7 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import { HeroSlider } from "@/components/ui/HeroSlider";
-import { Store, Wrench, ShoppingCart, Pill, UtensilsCrossed, HardHat, Briefcase, Calculator } from "lucide-react";
+import { Store, Wrench, ShoppingCart, Pill, UtensilsCrossed, HardHat, Briefcase, Calculator, Cloud } from "lucide-react";
 
 export default function Home() {
   return (
@@ -73,9 +73,10 @@ export default function Home() {
               <div className="absolute top-0 right-6 bg-blue-600 text-white text-[9px] font-bold px-2 py-1 rounded-b-md">DGI PANAMÁ</div>
               {/* App Icon Minimalista */}
               <div className="flex items-center gap-3.5 mb-6 mt-2">
-                <div className="w-11 h-11 rounded-[12px] bg-gradient-to-br from-blue-600 to-indigo-800 flex flex-col items-center justify-center shadow-md shadow-blue-600/20 shrink-0 border border-blue-400/30 group-hover:scale-105 transition-transform">
-                  <span className="text-white text-[7px] font-black leading-tight tracking-tighter opacity-90 mt-0.5">ICONPOS</span>
-                  <span className="text-sky-300 text-[13px] font-black leading-tight drop-shadow-md">WEB</span>
+                <div className="w-12 h-12 rounded-[12px] bg-[#0A132B] flex flex-col items-center justify-center shadow-md shadow-blue-900/20 shrink-0 border border-slate-700/40 group-hover:scale-105 transition-transform">
+                  <span className="text-white text-[6px] font-black leading-none tracking-widest mt-1 opacity-90">ICONPOS</span>
+                  <Cloud className="w-5 h-5 text-sky-400 my-0.5" strokeWidth={2.5} />
+                  <span className="text-sky-400 text-[8px] font-black leading-none drop-shadow-sm mb-1">WEB</span>
                 </div>
                 <h3 className="text-[17px] font-extrabold text-slate-900 leading-tight">ICONPOS<br/>WEB INVOICE</h3>
               </div>

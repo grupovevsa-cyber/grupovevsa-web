@@ -19,9 +19,10 @@ export function Navbar() {
 
         <nav className="hidden md:flex items-center space-x-6 text-sm font-medium">
           <Link href="/" className="transition-colors hover:text-blue-600">Inicio</Link>
-          <Link href="#servicios" className="transition-colors hover:text-blue-600">Servicios</Link>
-          <Link href="#productos" className="transition-colors hover:text-blue-600">Software Propio</Link>
-          <Link href="/foro" className="transition-colors hover:text-blue-600">Foro de Soporte</Link>
+          <Link href="/#servicios" className="transition-colors hover:text-blue-600">Servicios</Link>
+          <Link href="/#productos" className="transition-colors hover:text-blue-600">Nuestras Soluciones</Link>
+          <Link href="/distribuidores" className="transition-colors hover:text-blue-600">Distribuidores</Link>
+          <Link href="/foro" className="transition-colors hover:text-blue-600">Foro</Link>
           <Link href="/tienda" className="transition-colors hover:text-blue-600">Tienda</Link>
         </nav>
 

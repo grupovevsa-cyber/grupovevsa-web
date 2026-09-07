@@ -60,6 +60,29 @@ export default function TiendaPage() {
       ]
     },
     { name: "KITS POS" },
+    {
+      name: "+ PRODUCTOS",
+      megaMenu: [
+        { title: "MONÉTICA", links: ["Detector de billetes", "Contador de billetes", "Contador de monedas", "Balanza contadora"] },
+        { title: "ATENCIÓN Y CONTROL", links: ["Escaner de Documentos", "Control de presencia"] }
+      ]
+    },
+    {
+      name: "REDES / SEGURIDAD",
+      megaMenu: [
+        { title: "EQUIPOS", links: ["Cámaras de Seguridad", "Routers", "Control de Accesos"] },
+        { title: "INFRAESTRUCTURA", links: ["Gabinetes de Red", "Cables", "Accesorios y Conectores"] },
+        { title: "SOPORTE", links: ["Servicios Técnicos de Red"] }
+      ]
+    },
+    {
+      name: "ENERGÍA",
+      megaMenu: [
+        { title: "RESPALDO Y UPS", links: ["Batería UPS y Respaldos", "Sistemas Portables (EcoFlow)"] },
+        { title: "ENERGÍA RENOVABLE", links: ["Paneles Solares", "Baterías para Solar", "Inversores de Corriente", "Energía Eólica y Turbinas"] },
+        { title: "SOPORTE ELÉCTRICO", links: ["Servicios Técnicos Ing. Eléctricos"] }
+      ]
+    },
     { name: "OUTLET" }
   ];
 

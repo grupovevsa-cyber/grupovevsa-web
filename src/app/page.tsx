@@ -1,6 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import { HeroSlider } from "@/components/ui/HeroSlider";
+import { Store, Wrench, ShoppingCart, Pill, UtensilsCrossed, HardHat, Briefcase, Calculator } from "lucide-react";
 
 export default function Home() {
   return (
@@ -112,6 +113,145 @@ export default function Home() {
                 <span className="font-bold text-xl leading-none ml-0.5">›</span>
               </Link>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Sectores / Tipos de Negocio */}
+      <section className="py-24 bg-[#0B132B]" id="sectores">
+        <div className="container mx-auto px-4 md:px-8">
+          <div className="text-center max-w-3xl mx-auto mb-16">
+            <span className="text-sky-400 font-bold tracking-widest text-sm uppercase mb-2 block">Tipos de Negocio</span>
+            <h2 className="text-4xl md:text-5xl font-extrabold tracking-tight text-white mb-6">
+              Una solución para cada industria
+            </h2>
+            <p className="text-slate-400 text-lg">
+              Identifica rápidamente el entorno de tu empresa y descubre plataformas optimizadas específicamente para tu operación diaria.
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+            
+            {/* Retail */}
+            <div className="group relative rounded-[24px] overflow-hidden bg-slate-800/50 border border-slate-700/50 hover:border-slate-500 transition-all duration-300 hover:-translate-y-1">
+              <div className="h-44 w-full relative">
+                <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1441986300917-64674bd600d8?q=80&w=800&auto=format&fit=crop')] bg-cover bg-center group-hover:scale-110 transition-transform duration-700"></div>
+                <div className="absolute inset-0 bg-gradient-to-t from-slate-800/90 via-slate-800/40 to-transparent"></div>
+                <div className="absolute bottom-3 left-5 p-2.5 rounded-xl bg-white/10 backdrop-blur-md border border-white/10 text-sky-400">
+                  <Store className="w-5 h-5" />
+                </div>
+              </div>
+              <div className="p-6 pt-2">
+                <h3 className="text-xl font-bold text-white mb-2">Retail y Comercio</h3>
+                <p className="text-slate-400 text-sm leading-relaxed">Punto de venta rápido, control de inventario multisede y operación para tiendas de todos los tamaños.</p>
+              </div>
+            </div>
+
+            {/* Ferreterías */}
+            <div className="group relative rounded-[24px] overflow-hidden bg-slate-800/50 border border-slate-700/50 hover:border-slate-500 transition-all duration-300 hover:-translate-y-1">
+              <div className="h-44 w-full relative">
+                <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1540104539488-92a51bbc0410?q=80&w=800&auto=format&fit=crop')] bg-cover bg-center group-hover:scale-110 transition-transform duration-700"></div>
+                <div className="absolute inset-0 bg-gradient-to-t from-slate-800/90 via-slate-800/40 to-transparent"></div>
+                <div className="absolute bottom-3 left-5 p-2.5 rounded-xl bg-white/10 backdrop-blur-md border border-white/10 text-sky-400">
+                  <Wrench className="w-5 h-5" />
+                </div>
+              </div>
+              <div className="p-6 pt-2">
+                <h3 className="text-xl font-bold text-white mb-2">Ferreterías</h3>
+                <p className="text-slate-400 text-sm leading-relaxed">Gestión de miles de SKUs, inventario por peso/medida, despachos y entregas de mercancía bajo control.</p>
+              </div>
+            </div>
+
+            {/* Alimentos */}
+            <div className="group relative rounded-[24px] overflow-hidden bg-slate-800/50 border border-slate-700/50 hover:border-slate-500 transition-all duration-300 hover:-translate-y-1">
+              <div className="h-44 w-full relative">
+                <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1542838132-92c53300491e?q=80&w=800&auto=format&fit=crop')] bg-cover bg-center group-hover:scale-110 transition-transform duration-700"></div>
+                <div className="absolute inset-0 bg-gradient-to-t from-slate-800/90 via-slate-800/40 to-transparent"></div>
+                <div className="absolute bottom-3 left-5 p-2.5 rounded-xl bg-white/10 backdrop-blur-md border border-white/10 text-sky-400">
+                  <ShoppingCart className="w-5 h-5" />
+                </div>
+              </div>
+              <div className="p-6 pt-2">
+                <h3 className="text-xl font-bold text-white mb-2">Alimentos</h3>
+                <p className="text-slate-400 text-sm leading-relaxed">Gestión avanzada para supermercados, abarroterías y distribuidoras de alimentos al por mayor.</p>
+              </div>
+            </div>
+
+            {/* Farmacias */}
+            <div className="group relative rounded-[24px] overflow-hidden bg-slate-800/50 border border-slate-700/50 hover:border-slate-500 transition-all duration-300 hover:-translate-y-1">
+              <div className="h-44 w-full relative">
+                <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1585435557343-3b092031a831?q=80&w=800&auto=format&fit=crop')] bg-cover bg-center group-hover:scale-110 transition-transform duration-700"></div>
+                <div className="absolute inset-0 bg-gradient-to-t from-slate-800/90 via-slate-800/40 to-transparent"></div>
+                <div className="absolute bottom-3 left-5 p-2.5 rounded-xl bg-white/10 backdrop-blur-md border border-white/10 text-sky-400">
+                  <Pill className="w-5 h-5" />
+                </div>
+              </div>
+              <div className="p-6 pt-2">
+                <h3 className="text-xl font-bold text-white mb-2">Farmacias</h3>
+                <p className="text-slate-400 text-sm leading-relaxed">Manejo estricto de lotes, fechas de vencimiento, recetas, empaques y unidades fraccionadas.</p>
+              </div>
+            </div>
+
+            {/* Restaurantes */}
+            <div className="group relative rounded-[24px] overflow-hidden bg-slate-800/50 border border-slate-700/50 hover:border-slate-500 transition-all duration-300 hover:-translate-y-1">
+              <div className="h-44 w-full relative">
+                <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?q=80&w=800&auto=format&fit=crop')] bg-cover bg-center group-hover:scale-110 transition-transform duration-700"></div>
+                <div className="absolute inset-0 bg-gradient-to-t from-slate-800/90 via-slate-800/40 to-transparent"></div>
+                <div className="absolute bottom-3 left-5 p-2.5 rounded-xl bg-white/10 backdrop-blur-md border border-white/10 text-sky-400">
+                  <UtensilsCrossed className="w-5 h-5" />
+                </div>
+              </div>
+              <div className="p-6 pt-2">
+                <h3 className="text-xl font-bold text-white mb-2">Restaurantes</h3>
+                <p className="text-slate-400 text-sm leading-relaxed">Control de mesas, comandas a cocina, recetas, mermas y punto de venta para autoservicio y comedores.</p>
+              </div>
+            </div>
+
+            {/* Construcción */}
+            <div className="group relative rounded-[24px] overflow-hidden bg-slate-800/50 border border-slate-700/50 hover:border-slate-500 transition-all duration-300 hover:-translate-y-1">
+              <div className="h-44 w-full relative">
+                <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1503387762-592deb58ef4e?q=80&w=800&auto=format&fit=crop')] bg-cover bg-center group-hover:scale-110 transition-transform duration-700"></div>
+                <div className="absolute inset-0 bg-gradient-to-t from-slate-800/90 via-slate-800/40 to-transparent"></div>
+                <div className="absolute bottom-3 left-5 p-2.5 rounded-xl bg-white/10 backdrop-blur-md border border-white/10 text-sky-400">
+                  <HardHat className="w-5 h-5" />
+                </div>
+              </div>
+              <div className="p-6 pt-2">
+                <h3 className="text-xl font-bold text-white mb-2">Construcción</h3>
+                <p className="text-slate-400 text-sm leading-relaxed">Presupuestos, centros de costo, seguimiento de actividades en ejecución y control de maquinarias.</p>
+              </div>
+            </div>
+
+            {/* Servicios Profesionales */}
+            <div className="group relative rounded-[24px] overflow-hidden bg-slate-800/50 border border-slate-700/50 hover:border-slate-500 transition-all duration-300 hover:-translate-y-1">
+              <div className="h-44 w-full relative">
+                <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1600880292203-757bb62b4baf?q=80&w=800&auto=format&fit=crop')] bg-cover bg-center group-hover:scale-110 transition-transform duration-700"></div>
+                <div className="absolute inset-0 bg-gradient-to-t from-slate-800/90 via-slate-800/40 to-transparent"></div>
+                <div className="absolute bottom-3 left-5 p-2.5 rounded-xl bg-white/10 backdrop-blur-md border border-white/10 text-sky-400">
+                  <Briefcase className="w-5 h-5" />
+                </div>
+              </div>
+              <div className="p-6 pt-2">
+                <h3 className="text-xl font-bold text-white mb-2">Servicios</h3>
+                <p className="text-slate-400 text-sm leading-relaxed">Venta de servicios intangibles, gestión de comisiones, citas y facturación recurrente.</p>
+              </div>
+            </div>
+
+            {/* Contabilidad */}
+            <div className="group relative rounded-[24px] overflow-hidden bg-slate-800/50 border border-slate-700/50 hover:border-slate-500 transition-all duration-300 hover:-translate-y-1">
+              <div className="h-44 w-full relative">
+                <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?q=80&w=800&auto=format&fit=crop')] bg-cover bg-center group-hover:scale-110 transition-transform duration-700"></div>
+                <div className="absolute inset-0 bg-gradient-to-t from-slate-800/90 via-slate-800/40 to-transparent"></div>
+                <div className="absolute bottom-3 left-5 p-2.5 rounded-xl bg-white/10 backdrop-blur-md border border-white/10 text-sky-400">
+                  <Calculator className="w-5 h-5" />
+                </div>
+              </div>
+              <div className="p-6 pt-2">
+                <h3 className="text-xl font-bold text-white mb-2">Contabilidad</h3>
+                <p className="text-slate-400 text-sm leading-relaxed">Procesos automatizados, estados financieros, libros mayores contables y reportes detallados en tiempo real.</p>
+              </div>
+            </div>
+
           </div>
         </div>
       </section>

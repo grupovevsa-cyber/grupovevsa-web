@@ -36,83 +36,107 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Nuestras Soluciones (Productos) */}
-      <section className="py-24 bg-slate-50" id="productos">
+      {/* Nuestras Soluciones (Productos) - Estilo Minimalista y Alineado a la Izquierda */}
+      <section className="py-24 bg-white" id="productos">
         <div className="container mx-auto px-4 md:px-8">
-          <div className="text-center max-w-3xl mx-auto mb-20">
-            <h2 className="text-4xl font-extrabold tracking-tight text-slate-900 mb-4">
-              Nuestras <span className="text-blue-600">Soluciones</span>
+          <div className="text-center max-w-3xl mx-auto mb-16">
+            <span className="text-orange-500 font-bold tracking-widest text-[11px] uppercase mb-3 block">Nuestras Soluciones</span>
+            <h2 className="text-3xl md:text-4xl font-extrabold tracking-tight text-slate-900">
+              Tecnología para simplificar cada proceso
             </h2>
-            <p className="text-slate-600 text-lg">
-              Ofrecemos herramientas modulares que transforman la gestión empresarial, se adaptan a tus procesos y llevan tu negocio al siguiente nivel.
-            </p>
           </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+            
             {/* ICONPOS WEBCONECT */}
-            <div className="bg-white px-6 py-10 rounded-[32px] shadow-[0_8px_30px_rgb(0,0,0,0.06)] hover:shadow-[0_20px_40px_rgb(0,0,0,0.12)] hover:-translate-y-2 transition-all duration-300 border border-slate-100 flex flex-col items-center text-center group">
-              {/* App Icon */}
-              <div className="w-24 h-24 mb-6 rounded-[26px] bg-gradient-to-br from-teal-600 to-teal-800 shadow-lg shadow-teal-700/30 flex items-center justify-center group-hover:scale-105 transition-transform duration-300">
-                <span className="text-white font-black text-xl leading-tight tracking-tight drop-shadow-md">ICON<br/>POS</span>
+            <div className="bg-white p-8 rounded-2xl border border-slate-200 hover:shadow-[0_8px_30px_rgb(0,0,0,0.08)] hover:border-slate-300 transition-all duration-300 flex flex-col text-left group">
+              {/* Logo Minimalista */}
+              <div className="flex items-center gap-3 mb-8">
+                <div className="grid grid-cols-3 gap-[2px] w-7 h-7">
+                  {[...Array(9)].map((_, i) => (
+                    <div key={i} className="bg-teal-500 rounded-[1px]"></div>
+                  ))}
+                </div>
+                <span className="font-extrabold text-slate-800 text-sm tracking-tight">ICONPOS</span>
               </div>
-              <h3 className="text-lg font-bold text-teal-800 mb-4 h-14 flex items-center justify-center">ICONPOS WEBCONECT</h3>
-              <div className="w-12 h-1 bg-slate-200 rounded-full mb-6"></div>
+              
+              <h3 className="text-xl font-bold text-slate-900 mb-3">ICONPOS WEBCONECT</h3>
               <p className="text-sm text-slate-500 mb-8 flex-grow leading-relaxed">
                 Plataforma centralizada de interconexión y sincronización de puntos de venta, transacciones multisede y monitoreo cloud en tiempo real.
               </p>
-              <Link href="/productos/iconpos" className="w-10 h-10 rounded-full bg-slate-100 flex items-center justify-center text-slate-400 group-hover:bg-teal-600 group-hover:text-white transition-colors" title="Ver detalles">
-                <span className="font-bold text-xl leading-none ml-0.5">›</span>
+              
+              <Link href="/productos/iconpos" className="text-orange-500 hover:text-orange-600 text-sm font-semibold flex items-center gap-1.5 group-hover:gap-2.5 transition-all mt-auto">
+                Ver producto <span className="text-lg leading-none transition-transform group-hover:translate-x-1">→</span>
               </Link>
             </div>
 
             {/* ICONPOS WEB INVOICE */}
-            <div className="bg-white px-6 py-10 rounded-[32px] shadow-[0_8px_30px_rgb(0,0,0,0.06)] hover:shadow-[0_20px_40px_rgb(0,0,0,0.12)] hover:-translate-y-2 transition-all duration-300 border border-slate-100 flex flex-col items-center text-center group relative overflow-hidden">
-              <div className="absolute top-0 inset-x-0 mx-auto w-32 bg-blue-600 text-white text-[10px] font-bold px-2 py-1 rounded-b-lg drop-shadow-sm">DGI PANAMÁ</div>
-              {/* App Icon */}
-              <div className="w-24 h-24 mb-6 mt-4 rounded-[26px] bg-gradient-to-br from-blue-600 to-indigo-800 shadow-lg shadow-blue-700/30 flex items-center justify-center group-hover:scale-105 transition-transform duration-300">
-                <span className="text-white font-black text-xl leading-tight tracking-tight drop-shadow-md">WEB<br/>INV</span>
+            <div className="bg-white p-8 rounded-2xl border border-slate-200 hover:shadow-[0_8px_30px_rgb(0,0,0,0.08)] hover:border-slate-300 transition-all duration-300 flex flex-col text-left group relative">
+              <div className="absolute top-0 right-6 bg-blue-600 text-white text-[9px] font-bold px-2 py-1 rounded-b-md">DGI PANAMÁ</div>
+              {/* Logo Minimalista */}
+              <div className="flex items-center gap-3 mb-8">
+                <div className="grid grid-cols-3 gap-[2px] w-7 h-7">
+                  {[...Array(9)].map((_, i) => (
+                    <div key={i} className="bg-blue-600 rounded-[1px]"></div>
+                  ))}
+                </div>
+                <span className="font-extrabold text-slate-800 text-sm tracking-tight">WEB INVOICE</span>
               </div>
-              <h3 className="text-lg font-bold text-blue-800 mb-4 h-14 flex items-center justify-center">ICONPOS WEB INVOICE</h3>
-              <div className="w-12 h-1 bg-slate-200 rounded-full mb-6"></div>
+              
+              <h3 className="text-xl font-bold text-slate-900 mb-3">ICONPOS WEB INVOICE</h3>
               <p className="text-sm text-slate-500 mb-8 flex-grow leading-relaxed">
                 Módulo omnicanal de emisión fiscal. Generación de CUFE, QR DGI, descarga automática de comprobantes y reportería contable.
               </p>
-              <Link href="/productos/iconpos-web-invoice" className="w-10 h-10 rounded-full bg-slate-100 flex items-center justify-center text-slate-400 group-hover:bg-blue-600 group-hover:text-white transition-colors" title="Ir al facturador">
-                <span className="font-bold text-xl leading-none ml-0.5">›</span>
+              
+              <Link href="/productos/iconpos-web-invoice" className="text-orange-500 hover:text-orange-600 text-sm font-semibold flex items-center gap-1.5 group-hover:gap-2.5 transition-all mt-auto">
+                Ver producto <span className="text-lg leading-none transition-transform group-hover:translate-x-1">→</span>
               </Link>
             </div>
 
             {/* ICON SUPPORT */}
-            <div className="bg-white px-6 py-10 rounded-[32px] shadow-[0_8px_30px_rgb(0,0,0,0.06)] hover:shadow-[0_20px_40px_rgb(0,0,0,0.12)] hover:-translate-y-2 transition-all duration-300 border border-slate-100 flex flex-col items-center text-center group">
-              {/* App Icon */}
-              <div className="w-24 h-24 mb-6 rounded-[26px] bg-gradient-to-br from-emerald-500 to-emerald-700 shadow-lg shadow-emerald-700/30 flex items-center justify-center group-hover:scale-105 transition-transform duration-300">
-                <span className="text-white font-black text-xl leading-tight tracking-tight drop-shadow-md">ICON<br/>SUP</span>
+            <div className="bg-white p-8 rounded-2xl border border-slate-200 hover:shadow-[0_8px_30px_rgb(0,0,0,0.08)] hover:border-slate-300 transition-all duration-300 flex flex-col text-left group">
+              {/* Logo Minimalista */}
+              <div className="flex items-center gap-3 mb-8">
+                <div className="grid grid-cols-3 gap-[2px] w-7 h-7">
+                  {[...Array(9)].map((_, i) => (
+                    <div key={i} className="bg-emerald-500 rounded-[1px]"></div>
+                  ))}
+                </div>
+                <span className="font-extrabold text-slate-800 text-sm tracking-tight">SUPPORT</span>
               </div>
-              <h3 className="text-lg font-bold text-emerald-800 mb-4 h-14 flex items-center justify-center">ICON SUPPORT</h3>
-              <div className="w-12 h-1 bg-slate-200 rounded-full mb-6"></div>
+              
+              <h3 className="text-xl font-bold text-slate-900 mb-3">ICON SUPPORT</h3>
               <p className="text-sm text-slate-500 mb-8 flex-grow leading-relaxed">
                 Plataforma web de soporte técnico con tickets de servicio, trazabilidad QR, geolocalización y firmas digitales.
               </p>
-              <Link href="/productos/icon-support" className="w-10 h-10 rounded-full bg-slate-100 flex items-center justify-center text-slate-400 group-hover:bg-emerald-600 group-hover:text-white transition-colors" title="Ver detalles">
-                <span className="font-bold text-xl leading-none ml-0.5">›</span>
+              
+              <Link href="/productos/icon-support" className="text-orange-500 hover:text-orange-600 text-sm font-semibold flex items-center gap-1.5 group-hover:gap-2.5 transition-all mt-auto">
+                Ver producto <span className="text-lg leading-none transition-transform group-hover:translate-x-1">→</span>
               </Link>
             </div>
 
             {/* ICON GENIUS */}
-            <div className="bg-white px-6 py-10 rounded-[32px] shadow-[0_8px_30px_rgb(0,0,0,0.06)] hover:shadow-[0_20px_40px_rgb(0,0,0,0.12)] hover:-translate-y-2 transition-all duration-300 border border-slate-100 flex flex-col items-center text-center group">
-              {/* App Icon */}
-              <div className="w-24 h-24 mb-6 rounded-[26px] bg-gradient-to-br from-rose-600 to-rose-800 shadow-lg shadow-rose-700/30 flex items-center justify-center group-hover:scale-105 transition-transform duration-300">
-                <span className="text-white font-black text-xl leading-tight tracking-tight drop-shadow-md">ICON<br/>GEN</span>
+            <div className="bg-white p-8 rounded-2xl border border-slate-200 hover:shadow-[0_8px_30px_rgb(0,0,0,0.08)] hover:border-slate-300 transition-all duration-300 flex flex-col text-left group">
+              {/* Logo Minimalista */}
+              <div className="flex items-center gap-3 mb-8">
+                <div className="grid grid-cols-3 gap-[2px] w-7 h-7">
+                  {[...Array(9)].map((_, i) => (
+                    <div key={i} className="bg-rose-500 rounded-[1px]"></div>
+                  ))}
+                </div>
+                <span className="font-extrabold text-slate-800 text-sm tracking-tight">GENIUS</span>
               </div>
-              <h3 className="text-lg font-bold text-rose-800 mb-4 h-14 flex items-center justify-center">ICON GENIUS & BUILDER</h3>
-              <div className="w-12 h-1 bg-slate-200 rounded-full mb-6"></div>
+              
+              <h3 className="text-xl font-bold text-slate-900 mb-3">ICON GENIUS & BUILDER</h3>
               <p className="text-sm text-slate-500 mb-8 flex-grow leading-relaxed">
                 Plataforma inteligente de desarrollo asistido con IA. Constructora de flujos de automatización operativa.
               </p>
-              <Link href="/productos/icon-genius" className="w-10 h-10 rounded-full bg-slate-100 flex items-center justify-center text-slate-400 group-hover:bg-rose-600 group-hover:text-white transition-colors" title="Ver detalles">
-                <span className="font-bold text-xl leading-none ml-0.5">›</span>
+              
+              <Link href="/productos/icon-genius" className="text-orange-500 hover:text-orange-600 text-sm font-semibold flex items-center gap-1.5 group-hover:gap-2.5 transition-all mt-auto">
+                Ver producto <span className="text-lg leading-none transition-transform group-hover:translate-x-1">→</span>
               </Link>
             </div>
+
           </div>
         </div>
       </section>

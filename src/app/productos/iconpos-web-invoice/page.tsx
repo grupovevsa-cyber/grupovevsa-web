@@ -36,17 +36,42 @@ export default function IconposWebInvoicePage() {
               </div>
             </div>
             
-            {/* Hero Image Mockup (Mobile & Tablet) */}
-            <div className="relative mx-auto w-full max-w-2xl transform hover:scale-105 transition-transform duration-500">
-              <div className="relative w-full h-[300px] sm:h-[450px]">
-                <Image 
-                  src="/images/iconpos-web-invoice/hero-devices.png" 
-                  alt="Sistema ICONPOS WEB CONECT Dispositivos" 
-                  fill 
-                  className="object-contain object-center drop-shadow-2xl" 
-                  priority
-                />
+            {/* Hero Image Mockups (CSS Composition) */}
+            <div className="relative mx-auto w-full max-w-2xl h-[350px] sm:h-[450px] transform hover:scale-[1.02] transition-transform duration-500 mt-8 lg:mt-0">
+              
+              {/* Tablet (Back/Right) */}
+              <div className="absolute right-0 top-0 sm:top-4 w-[85%] sm:w-[80%] h-[260px] sm:h-[340px] bg-gray-900 border-[10px] sm:border-[14px] border-gray-900 rounded-[1.5rem] sm:rounded-[2rem] shadow-2xl">
+                {/* Tablet Hardware details */}
+                <div className="absolute top-1/2 -left-[14px] w-[3px] h-[40px] bg-gray-800 rounded-l-lg -translate-y-1/2"></div>
+                <div className="absolute -top-[14px] left-1/2 w-[40px] h-[3px] bg-gray-800 rounded-t-lg -translate-x-1/2"></div>
+                
+                <div className="rounded-lg sm:rounded-xl overflow-hidden w-full h-full bg-slate-100 relative">
+                  <Image 
+                    src="/images/iconpos-web-invoice/pos-tablet.png" 
+                    alt="POS Tablet Pantalla de Ventas" 
+                    fill 
+                    className="object-cover object-left-top" 
+                  />
+                </div>
               </div>
+
+              {/* Mobile (Front/Left) */}
+              <div className="absolute left-0 sm:left-4 bottom-0 sm:bottom-4 w-[150px] sm:w-[190px] h-[300px] sm:h-[380px] bg-gray-900 border-[10px] sm:border-[12px] border-gray-900 rounded-[2rem] shadow-[0_20px_50px_rgba(0,0,0,0.5)] z-20">
+                {/* Mobile Hardware details (Notch/Buttons) */}
+                <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[40%] h-[12px] sm:h-[16px] bg-gray-900 rounded-b-xl z-30"></div>
+                <div className="absolute top-[80px] -left-[12px] w-[3px] h-[30px] bg-gray-800 rounded-l-lg"></div>
+                <div className="absolute top-[120px] -left-[12px] w-[3px] h-[30px] bg-gray-800 rounded-l-lg"></div>
+                
+                <div className="rounded-2xl overflow-hidden w-full h-full bg-white relative">
+                  <Image 
+                    src="/images/iconpos-web-invoice/login-mobile.png" 
+                    alt="Login Mobile App" 
+                    fill 
+                    className="object-cover object-top" 
+                  />
+                </div>
+              </div>
+
             </div>
           </div>
         </div>

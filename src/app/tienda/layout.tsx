@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { Search, ShoppingCart, User, ShieldCheck, Truck, Wrench, Award, Facebook, Instagram, Twitter, ChevronRight, Info, HelpCircle } from "lucide-react";
+import CartButton from "@/components/tienda/CartButton";
 
 export default function TiendaLayout({ children }: { children: React.ReactNode }) {
   const megaCategories = [
@@ -116,15 +117,12 @@ export default function TiendaLayout({ children }: { children: React.ReactNode }
               <p className="text-[10px] text-slate-500 font-bold uppercase tracking-wide">Taller y Soporte L-V</p>
             </div>
             <div className="flex items-center gap-6">
-              <button className="flex flex-col items-center text-slate-600 hover:text-blue-900 transition-colors">
+              <Link href="/login" className="flex flex-col items-center justify-center text-slate-500 hover:text-blue-900 transition-colors">
                 <User className="w-6 h-6 mb-1" />
-                <span className="text-[11px] font-bold uppercase">Cuenta</span>
-              </button>
-              <button className="flex flex-col items-center text-slate-600 hover:text-blue-900 transition-colors relative">
-                <div className="absolute -top-1 -right-2 bg-sky-500 text-white text-[10px] font-bold w-4 h-4 rounded-full flex items-center justify-center">0</div>
-                <ShoppingCart className="w-6 h-6 mb-1" />
-                <span className="text-[11px] font-bold uppercase">Carrito</span>
-              </button>
+                <span className="text-[10px] font-bold uppercase tracking-wider">Cuenta</span>
+              </Link>
+              
+              <CartButton />
             </div>
           </div>
         </div>

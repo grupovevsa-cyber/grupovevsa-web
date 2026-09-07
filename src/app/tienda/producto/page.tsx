@@ -1,7 +1,28 @@
-import { Monitor, Info, CreditCard, ShoppingCart, Facebook, Twitter, Link as LinkIcon } from "lucide-react";
+"use client";
+
+import { Monitor, Info, CreditCard, ShoppingCart, Facebook, Twitter, Link as LinkIcon, CheckCircle } from "lucide-react";
 import Link from "next/link";
+import { useState } from "react";
+import { useCartStore } from "@/store/useCartStore";
 
 export default function ProductoPage() {
+  const [qty, setQty] = useState(1);
+  const [added, setAdded] = useState(false);
+  const addItem = useCartStore((state) => state.addItem);
+
+  const handleAddToCart = () => {
+    addItem({
+      id: "prod_geon_h3_1",
+      name: "QUIOSCO WINDOWS GEON H3 | J6412 | 8GB RAM | 128GB | 21,5\"",
+      price: 1095.04,
+      quantity: qty,
+      image: "",
+      slug: "geon-h3-win"
+    });
+    setAdded(true);
+    setTimeout(() => setAdded(false), 3000);
+  };
+
   return (
     <div className="container mx-auto px-4 py-8 max-w-6xl">
       {/* Breadcrumbs */}
@@ -49,10 +70,16 @@ export default function ProductoPage() {
             <div className="flex justify-between items-end mb-8 pb-8 border-b border-slate-100">
               <div>
                 <label className="text-[11px] font-bold text-sky-600 uppercase tracking-wider mb-2 block">CANTIDAD</label>
-                <select className="border border-slate-300 rounded px-4 py-2 text-sm bg-slate-50 focus:ring-blue-900 focus:border-blue-900 w-24">
-                  <option>1</option>
-                  <option>2</option>
-                  <option>3</option>
+                <select 
+                  value={qty}
+                  onChange={(e) => setQty(Number(e.target.value))}
+                  className="border border-slate-300 rounded px-4 py-2 text-sm bg-slate-50 focus:ring-blue-900 focus:border-blue-900 w-24"
+                >
+                  <option value={1}>1</option>
+                  <option value={2}>2</option>
+                  <option value={3}>3</option>
+                  <option value={4}>4</option>
+                  <option value={5}>5</option>
                 </select>
               </div>
               <div className="text-right">
@@ -61,8 +88,12 @@ export default function ProductoPage() {
               </div>
             </div>
 
-            <button className="w-full bg-blue-900 text-white font-bold py-4 rounded hover:bg-blue-800 transition-colors flex items-center justify-center gap-2 mb-8">
-              AÑADIR AL CARRITO
+            <button 
+              onClick={handleAddToCart}
+              disabled={added}
+              className={`w-full font-bold py-4 rounded transition-all flex items-center justify-center gap-2 mb-8 shadow-lg ${added ? 'bg-green-600 hover:bg-green-700 text-white' : 'bg-blue-900 hover:bg-blue-800 text-white'}`}
+            >
+              {added ? <><CheckCircle className="w-5 h-5"/> ¡AÑADIDO AL CARRITO!</> : 'AÑADIR AL CARRITO'}
             </button>
 
             <div className="mb-8">

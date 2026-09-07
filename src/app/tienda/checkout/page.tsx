@@ -1,13 +1,25 @@
 "use client";
 
-import { useState } from "react";
-import Image from "next/image";
+import { useState, useEffect } from "react";
 import Link from "next/link";
 import { Monitor, CreditCard, Smartphone, Building, ShieldCheck, HelpCircle } from "lucide-react";
+import { useCartStore } from "@/store/useCartStore";
 
 export default function CheckoutPage() {
   const [deliveryMethod, setDeliveryMethod] = useState<"envio" | "retiro">("envio");
   const [paymentMethod, setPaymentMethod] = useState<"tarjeta" | "yappy" | "ach" | "bct">("tarjeta");
+  const { items } = useCartStore();
+  const [mounted, setMounted] = useState(false);
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
+
+  if (!mounted) return null;
+
+  const subtotal = items.reduce((total, item) => total + (item.price * item.quantity), 0);
+  const tax = subtotal * 0.07;
+  const total = subtotal + tax;
 
   return (
     <div className="min-h-screen bg-slate-50 border-t border-slate-200">
@@ -224,20 +236,28 @@ export default function CheckoutPage() {
             <div className="sticky top-8">
               
               {/* Product List */}
-              <div className="flex items-center gap-4 mb-6 relative">
-                <div className="relative">
-                  <div className="w-16 h-16 bg-white border border-slate-200 rounded-lg flex items-center justify-center p-2">
-                    <Monitor className="w-full h-full text-slate-300" />
-                  </div>
-                  <div className="absolute -top-2 -right-2 w-5 h-5 bg-slate-500 text-white rounded-full flex items-center justify-center text-[10px] font-bold shadow-sm">1</div>
-                </div>
-                <div className="flex-1">
-                  <h4 className="text-sm font-bold text-slate-800 leading-snug">QUIOSCO Windows GEON H3 | J6412 | 8GB RAM</h4>
-                  <p className="text-[10px] text-slate-500 mt-0.5">128GB | 21.5" | Pie sobremesa y suelo</p>
-                </div>
-                <div className="text-sm font-black text-slate-800">
-                  B/. 1,095.04
-                </div>
+              <div className="space-y-4 mb-6">
+                {items.length === 0 ? (
+                  <p className="text-sm text-slate-500">Tu carrito está vacío.</p>
+                ) : (
+                  items.map((item) => (
+                    <div key={item.id} className="flex items-center gap-4 relative">
+                      <div className="relative">
+                        <div className="w-16 h-16 bg-white border border-slate-200 rounded-lg flex items-center justify-center p-2">
+                          <Monitor className="w-full h-full text-slate-300" />
+                        </div>
+                        <div className="absolute -top-2 -right-2 w-5 h-5 bg-slate-500 text-white rounded-full flex items-center justify-center text-[10px] font-bold shadow-sm">{item.quantity}</div>
+                      </div>
+                      <div className="flex-1">
+                        <h4 className="text-sm font-bold text-slate-800 leading-snug">{item.name}</h4>
+                        <p className="text-[10px] text-slate-500 mt-0.5">Precio Ud. B/. {item.price.toFixed(2)}</p>
+                      </div>
+                      <div className="text-sm font-black text-slate-800">
+                        B/. {(item.price * item.quantity).toFixed(2)}
+                      </div>
+                    </div>
+                  ))
+                )}
               </div>
 
               {/* Discount Code */}
@@ -252,7 +272,7 @@ export default function CheckoutPage() {
               <div className="space-y-3 text-sm text-slate-600 mb-6">
                 <div className="flex justify-between">
                   <span>Subtotal</span>
-                  <span className="font-bold text-slate-800">B/. 1,095.04</span>
+                  <span className="font-bold text-slate-800">B/. {subtotal.toFixed(2)}</span>
                 </div>
                 <div className="flex justify-between items-center">
                   <span className="flex items-center gap-1">Envíos <HelpCircle className="w-3 h-3 text-slate-400"/></span>
@@ -262,7 +282,7 @@ export default function CheckoutPage() {
                 </div>
                 <div className="flex justify-between">
                   <span>ITBMS (7%)</span>
-                  <span className="font-bold text-slate-800">B/. 76.65</span>
+                  <span className="font-bold text-slate-800">B/. {tax.toFixed(2)}</span>
                 </div>
               </div>
 
@@ -270,7 +290,7 @@ export default function CheckoutPage() {
                 <span className="text-lg font-black text-slate-800">Total</span>
                 <div className="text-right">
                   <span className="text-xs text-slate-400 mr-2 uppercase">USD</span>
-                  <span className="text-2xl font-black text-blue-900">B/. 1,171.69</span>
+                  <span className="text-2xl font-black text-blue-900">B/. {total.toFixed(2)}</span>
                 </div>
               </div>
 

@@ -8,11 +8,11 @@
   - [ ] CRUD de Productos (`/admin/tienda/productos`).
   - [ ] Vista Pedidos (`/admin/tienda/pedidos`).
   - [ ] Vista Clientes (`/admin/tienda/clientes`).
-- [ ] Fase 3: Estado Global y Carrito (Frontend)
-  - [ ] Configurar Zustand para estado del carrito.
-  - [ ] Integrar carrito dinámico en `/tienda/cart`.
-- [ ] Fase 4: Checkout y Pasarelas
-  - [ ] Integrar estado de carrito con `/tienda/checkout`.
+- [x] Fase 3: Estado Global y Carrito (Frontend)
+  - [x] Configurar Zustand para estado del carrito.
+  - [x] Integrar carrito dinámico en `/tienda/cart`.
+- [x] Fase 4: Checkout y Pasarelas
+  - [x] Integrar estado de carrito con `/tienda/checkout`.
   - [ ] APIs para registro de Pedidos y simulación de Pagos.
 - [ ] Fase 5: Integración y Siembra de Datos (Seed)
   - [ ] Script de migración inicial con catálogo core.

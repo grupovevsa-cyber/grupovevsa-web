@@ -211,6 +211,17 @@ export default function TiendaLayout({ children }: { children: React.ReactNode }
               <br/><br/>
               Una empresa bajo la sociedad de <strong>GRUPO VEV, S.A.</strong>
             </p>
+            <div className="flex flex-col gap-2 mt-4 text-sm text-slate-300">
+              <a href="https://wa.me/50760015427" target="_blank" rel="noopener noreferrer" className="hover:text-blue-400 transition-colors">
+                WhatsApp: +507 6001-5427
+              </a>
+              <a href="mailto:info@grupovev.com" className="hover:text-blue-400 transition-colors">
+                Email: info@grupovev.com
+              </a>
+              <a href="https://instagram.com/grupovevsa" target="_blank" rel="noopener noreferrer" className="hover:text-pink-400 transition-colors">
+                Instagram: @grupovevsa
+              </a>
+            </div>
           </div>
 
           <div>

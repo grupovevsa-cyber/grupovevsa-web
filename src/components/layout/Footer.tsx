@@ -35,9 +35,22 @@ export function Footer() {
           <div>
             <h3 className="text-lg font-semibold text-white mb-4">Contacto</h3>
             <ul className="space-y-2 text-sm">
-              <li>WhatsApp: +507 6001-5427</li>
-              <li>Email: info@grupovev.com</li>
-              <li className="mt-2 text-xs text-slate-400">
+              <li>
+                <a href="https://wa.me/50760015427" target="_blank" rel="noopener noreferrer" className="hover:text-blue-400 transition-colors">
+                  WhatsApp: +507 6001-5427
+                </a>
+              </li>
+              <li>
+                <a href="mailto:info@grupovev.com" className="hover:text-blue-400 transition-colors">
+                  Email: info@grupovev.com
+                </a>
+              </li>
+              <li>
+                <a href="https://instagram.com/grupovevsa" target="_blank" rel="noopener noreferrer" className="hover:text-pink-400 transition-colors">
+                  Instagram: @grupovevsa
+                </a>
+              </li>
+              <li className="mt-4 text-xs text-slate-400">
                 San Francisco, Edif. Gran Plaza, Piso 2, Ofic. 2B. <br/>
                 Ciudad de Panamá, Panamá.
               </li>

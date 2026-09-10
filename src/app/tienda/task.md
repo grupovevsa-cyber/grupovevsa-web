@@ -1,19 +1,19 @@
-- [ ] Fase 1: Arquitectura de Base de Datos
-  - [/] Modificar `prisma/schema.prisma` añadiendo modelos de tienda.
-  - [ ] Ejecutar `npx prisma db push` o migración a Supabase.
-  - [ ] Generar nuevo Prisma Client.
-- [ ] Fase 2: Desarrollo del Panel Administrativo (CMS)
-  - [ ] Crear Layout del Admin CMS (`/admin/tienda/layout.tsx`).
-  - [ ] Vista Dashboard (`/admin/tienda`).
-  - [ ] CRUD de Productos (`/admin/tienda/productos`).
-  - [ ] Vista Pedidos (`/admin/tienda/pedidos`).
-  - [ ] Vista Clientes (`/admin/tienda/clientes`).
+- [x] Fase 1: Arquitectura de Base de Datos
+  - [x] Modificar `prisma/schema.prisma` añadiendo modelos de tienda.
+  - [x] Ejecutar `npx prisma db push` o migración a Supabase.
+  - [x] Generar nuevo Prisma Client.
+- [x] Fase 2: Desarrollo del Panel Administrativo (CMS)
+  - [x] Crear Layout del Admin CMS (`/admin/tienda/layout.tsx`).
+  - [x] Vista Dashboard (`/admin/tienda`).
+  - [x] CRUD de Productos (`/admin/tienda/productos`).
+  - [x] Vista Pedidos (`/admin/tienda/pedidos`).
+  - [x] Vista Clientes (`/admin/tienda/clientes`).
 - [x] Fase 3: Estado Global y Carrito (Frontend)
   - [x] Configurar Zustand para estado del carrito.
   - [x] Integrar carrito dinámico en `/tienda/cart`.
 - [x] Fase 4: Checkout y Pasarelas
   - [x] Integrar estado de carrito con `/tienda/checkout`.
-  - [ ] APIs para registro de Pedidos y simulación de Pagos.
-- [ ] Fase 5: Integración y Siembra de Datos (Seed)
-  - [ ] Script de migración inicial con catálogo core.
+  - [x] APIs para registro de Pedidos y simulación de Pagos.
+- [x] Fase 5: Integración y Siembra de Datos (Seed)
+  - [x] Script de migración inicial con catálogo core.
   - [ ] Reemplazar datos "hardcodeados" en Frontend por datos de BD.

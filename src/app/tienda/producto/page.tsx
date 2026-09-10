@@ -99,8 +99,8 @@ export default function ProductoPage() {
             <div className="mb-8">
               <span className="text-[11px] font-bold text-slate-800 uppercase tracking-wider mr-4">Compartir esto:</span>
               <div className="inline-flex gap-2">
-                <button className="w-8 h-8 bg-[#3b5998] text-white rounded-full flex items-center justify-center"><Facebook className="w-4 h-4" /></button>
-                <button className="w-8 h-8 bg-[#1da1f2] text-white rounded-full flex items-center justify-center"><Twitter className="w-4 h-4" /></button>
+                <button className="w-8 h-8 bg-[#3b5998] text-white rounded-full flex items-center justify-center"><span className="text-[10px]">FB</span></button>
+                <button className="w-8 h-8 bg-[#1da1f2] text-white rounded-full flex items-center justify-center"><span className="text-[10px]">X</span></button>
                 <button className="w-8 h-8 bg-slate-200 text-slate-600 rounded-full flex items-center justify-center"><LinkIcon className="w-4 h-4" /></button>
               </div>
             </div>

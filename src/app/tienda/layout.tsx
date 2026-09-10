@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import { Search, ShoppingCart, User, ShieldCheck, Truck, Wrench, Award, Facebook, Instagram, Twitter, ChevronRight, Info, HelpCircle } from "lucide-react";
+import { Search, ShoppingCart, User, ShieldCheck, Truck, Wrench, Award, ChevronRight, Info, HelpCircle } from "lucide-react";
 import CartButton from "@/components/tienda/CartButton";
 
 export default function TiendaLayout({ children }: { children: React.ReactNode }) {

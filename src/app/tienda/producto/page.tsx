@@ -1,6 +1,6 @@
 "use client";
 
-import { Monitor, Info, CreditCard, ShoppingCart, Facebook, Twitter, Link as LinkIcon, CheckCircle } from "lucide-react";
+import { Monitor, Info, CreditCard, ShoppingCart, Link as LinkIcon, CheckCircle } from "lucide-react";
 import Link from "next/link";
 import { useState } from "react";
 import { useCartStore } from "@/store/useCartStore";

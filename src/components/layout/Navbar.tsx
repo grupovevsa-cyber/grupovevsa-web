@@ -26,12 +26,7 @@ export function Navbar() {
         </nav>
 
         <div className="flex items-center space-x-4">
-          <Link 
-            href="/admin" 
-            className="hidden md:inline-flex h-9 items-center justify-center rounded-md bg-blue-900 px-4 py-2 text-sm font-medium text-white shadow transition-colors hover:bg-blue-800 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-blue-950"
-          >
-            Portal Clientes
-          </Link>
+          {/* Espacio reservado para futuros botones como Portal Clientes o Tienda */}
         </div>
       </div>
     </header>

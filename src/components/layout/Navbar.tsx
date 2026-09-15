@@ -23,7 +23,6 @@ export function Navbar() {
           <Link href="/#productos" className="transition-colors hover:text-blue-600">Nuestras Soluciones</Link>
           <Link href="/distribuidores" className="transition-colors hover:text-blue-600">Distribuidores</Link>
           <Link href="/foro" className="transition-colors hover:text-blue-600">Foro</Link>
-          <Link href="/tienda" className="transition-colors hover:text-blue-600">Tienda</Link>
         </nav>
 
         <div className="flex items-center space-x-4">
